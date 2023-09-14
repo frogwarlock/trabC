@@ -25,7 +25,10 @@ int matriz_vendedores[2][2] = {
     {88, 'Elza'}
 };
 
+void le_arquivo(){}
+
 void main(){
   
 
 }
+
