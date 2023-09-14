@@ -4,3 +4,7 @@ void lalalla(){
 
     printf("TESTE TESTE");
 }
+
+void main(){
+    lalalla();
+}
