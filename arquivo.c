@@ -20,8 +20,6 @@ typedef
         char nome[30];
     };
 
-
-
  le_arquivo(){
     FILE *textfile;
     char line[LINHA_MAXIMA_TAMANHO];
