@@ -2,7 +2,7 @@ código-do-vendedor nome-do-vendedor
 Código: 1 Nome: daniel 
 Código: 4 Nome: isabela
 Código: 3 Nome: eduardo 
-Código: 5  Nome: aniela
+Código: 5  Nome: Daniela
 Código: 15 Nome: bruno 
 Código: 55 Nome: maurício 
 Código: 34 Nome: pedro
