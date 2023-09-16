@@ -1,5 +1,5 @@
 código-do-vendedor código-do-produto unidades-vendidas
-Código do Vendedor: 
+
 Código: 1 Código do Vendedor: 6 Unidades Vendidas: 9
 Código: 4 Código do Vendedor: 7 Unidades Vendidas: 10
 Código: 3 Código do Vendedor: 4 Unidades Vendidas: 2
