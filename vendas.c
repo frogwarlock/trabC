@@ -1,15 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 #define LINHA_MAXIMA_TAMANHO 100
 
 
-void leitura_produtos(){
+void leitura_vendas(){
 
     FILE* arquivo;
     char line[LINHA_MAXIMA_TAMANHO];
 
-    arquivo = fopen("produtos.txt", "r");
+    arquivo = fopen("vendas.txt", "r");
 
     if(arquivo == NULL){
         perror("ERRO");
@@ -24,6 +25,6 @@ void leitura_produtos(){
 }
 
 int main(){
-    leitura_produtos();
+    leitura_vendas();
     return 0;
 }
