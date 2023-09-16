@@ -10,7 +10,7 @@ Código: 3 R$: 2.50 paçoca
 Código: 88 R$: 3.50 achocolatado
 Código: 42 R$: 8.25 pão
 Código: 54 R$: 44.40 prato feito 
-Código: 5 RR$: $:5.00 cereal
+Código: 5 R$: 5.00 cereal
 Código: 44 R$: 35.00 macarrão
 Código: 43 R$: 12.00 hambúrger
 Código: 82 R$: 9.50 milkshake
