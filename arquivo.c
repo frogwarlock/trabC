@@ -19,19 +19,8 @@ typedef
         float valor;
         char nome[30];
     };
-    
 
-int matriz_produtos[3][3] = {
-    {35, 25.00, 'Prato'},
-    {60, 10.00, 'Garfo'},
-    {89, 20.00, 'Faca'}
-  };
 
-int matriz_vendedores[2][2] = {
-    {54, 'Marisa'},
-    {71, 'Elis'},
-    {88, 'Elza'}
-};
 
  le_arquivo(){
     FILE *textfile;
