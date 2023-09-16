@@ -39,6 +39,5 @@ typedef
 
 void main(){
     le_arquivo();
-    return 0;
 };
 
