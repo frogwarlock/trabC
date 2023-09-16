@@ -1,29 +1,22 @@
 código-do-vendedor código-do-produto unidades-vendidas
-
-1 6 9
-4 7 10
-3 4 2
-5 12 9
-15 1 1
-55 9 3
-34 3 12
-20 88 3
-66 42 12 
-9 54 3
-12 5 12 
-96 44 8
-69 43 6
-33 82 9 
-90 67 4 
-19 45 5
-74 78 3 
-62 34 6 
-
-
-
-
-
-
-
+Código do Vendedor: 
+Código: 1 Código do Vendedor: 6 Unidades Vendidas: 9
+Código: 4 Código do Vendedor: 7 Unidades Vendidas: 10
+Código: 3 Código do Vendedor: 4 Unidades Vendidas: 2
+Código: 5 Código do Vendedor: 12 Unidades Vendidas:  9
+Código: 15 Código do Vendedor: 1 Unidades Vendidas: 1
+Código: 55 Código do Vendedor: 9 Unidades Vendidas: 3
+Código: 34 Código do Vendedor: 3 Unidades Vendidas: 12
+Código: 20 Código do Vendedor: 88 Unidades Vendidas: 3
+Código: 66 Código do Vendedor: 42 Unidades Vendidas: 12 
+Código: 9 Código do Vendedor: 54 Unidaide Vendidas: 3
+Código: 12 Código do Vendedor: 5 Unidades Vendidas: 12 
+Código: 96 Código do Vendedor: 44 Unidades Vendidas: 8
+Código: 69 Código do Vendedor: 43 Unidades Vendidas: 6
+Código: 33 Código do Vendedor: 82 Unidades Vendidas: 9 
+Código: 90 Código do Vendedor: 67 Unidades Vendidas: 4 
+Código: 19 Código do Vendedor: 45 Unidades Vendidas: 5
+Código: 74 Código do Vendedor: 78 Unidades Vendidas: 3 
+Código: 62 Código do Vendedor: 34 Unidades Vendidas: 6  
 
 
