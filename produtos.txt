@@ -1,21 +1,20 @@
 código-do-produto preço-do-produto descrição-do-produto
 
-6 12.99 sanduíche
-7 5.50 salgado 
-4 3.50 café 
-12 5.00 refrigerante 
-1 9.90 sorvete 
-9 3.45 chá 
-3 2.50 paçoca
-88 3.50 achocolatado
-42 8.25 pão
-54 44.40 prato feito 
-5 5.00 cereal
-44 35.00 macarrão
-43 12.00 hambúrger
-82 9.50 milkshake
-67 3.50 barrinha
-45 1.00 bala
-78 7.50 suco
-34 6.90 whey
-
+Código: 6 R$: 12.99 sanduíche
+Código: 7 R$: 5.50 salgado 
+Código: 4 R$: 3.50 café 
+Código: 12 R$: 5.00 refrigerante 
+Código: 1 R$: 9.90 sorvete 
+Código: 9 R$: 3.45 chá 
+Código: 3 R$: 2.50 paçoca
+Código: 88 R$: 3.50 achocolatado
+Código: 42 R$: 8.25 pão
+Código: 54 R$: 44.40 prato feito 
+Código: 5 RR$: $:5.00 cereal
+Código: 44 R$: 35.00 macarrão
+Código: 43 R$: 12.00 hambúrger
+Código: 82 R$: 9.50 milkshake
+Código: 67 R$: 3.50 barrinha
+Código: 45 R$: 1.00 bala
+Código: 78 R$: 7.50 suco
+Código: 34 R$: 6.90 whey
