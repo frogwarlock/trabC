@@ -24,7 +24,7 @@ typedef
         char nome[30];
     };
 
- int le_arquivo(){
+ le_arquivo(){
     FILE *textfile;
     char line[LINHA_MAXIMA_TAMANHO];
 
@@ -33,20 +33,21 @@ typedef
         return 1;
     }
 
-    /*while(fgets(line, LINHA_MAXIMA_TAMANHO, textfile)){
+    while(fgets(line, LINHA_MAXIMA_TAMANHO, textfile)){
         printf(line);
-    }*/
-    
-    fclose(textfile);
+        char *substring = strtok(line, " ");
 
-    char *substring = strtok(line, " ");
-
-    while(substring != NULL){
+        int j = 0;
+        while(substring != NULL && j < 3){
         int num = atoi(substring);
         printf("numero: %d\n", num);
-
         substring = strtok(NULL, " ");
+        j++;
+        }
     }
+    
+
+    fclose(textfile);
     
 };
 
