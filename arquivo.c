@@ -33,8 +33,11 @@ typedef
         return 1;
     }
 
+    fscanf();
+    
     while(fgets(line, LINHA_MAXIMA_TAMANHO, textfile)){
         printf(line);
+        
         char *substring = strtok(line, " ");
 
         int j = 0;
