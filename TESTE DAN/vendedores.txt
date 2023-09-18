@@ -1,0 +1,19 @@
+código-do-vendedor nome-do-vendedor
+ 1  daniel 
+ 4  isabela
+ 3  eduardo 
+ 5   Daniela
+ 15  bruno 
+ 55  maurício 
+ 34  pedro
+ 20  gabriel 
+ 66  livia
+ 9   aristóteles
+ 12  boris
+ 96  eduarda 
+ 69  josé 
+ 33  laura 
+ 90  mauro 
+ 19  rafaela 
+ 74  nicolas 
+ 62  júlio
