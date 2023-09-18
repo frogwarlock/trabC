@@ -46,7 +46,7 @@ typedef struct{
     int codigo_produto;
     int unidades;
 } Venda;
-
+    
 // int diz respeito ao que ele retorna (como se fosse total de 
 // indíces)
 int main(){
@@ -95,19 +95,31 @@ int main(){
 
     //calc. vendas
     
-    float totalVendasxProduto[max_vendedores] = {0}; // determina a matriz com todos os itens 0
+    //total de vendas dos vendedores
+    float totalVendasxVendedores[max_vendedores] = {0}; // determina a matriz com todos os itens 0
 
     for (int i = 0; i < num_vendas; i++){
+        int codigo_vendedor = vendas[i].codigo_vendedor - 1;
         int codigo_produto = vendas[i].codigo_produto - 1;
-        float preco =  produtos[codigo_produto].preco - 1 ;
+        float preco = produtos[codigo_produto].preco;
         int unidades = vendas[i].unidades;
-        totalVendasxProduto[codigo_produto] += preco * unidades;
+        totalVendasxVendedores[codigo_vendedor] += preco * unidades;
     }
+
+    //total de vendas por produtos
+    float totalVendasxProdutos [max_produtos] = {0};
+    for (int i = 0; i < num_vendas; i++){
+        int codigo_produto = vendas[i]. codigo_produto - 1;
+        float preco = produtos[codigo_produto].preco;
+        int unidades = vendas[i].unidades;
+        totalVendasxProdutos[codigo_produto] += preco * unidades;
+    }
+    
 
     float totalGeral = 0;
 
     for (int i = 0; i < num_produtos; i++){
-        totalGeral += totalVendasxProduto[i];
+        totalGeral += totalVendasxVendedores[i];
     }
 
     //escreve info de vendas
@@ -117,15 +129,18 @@ int main(){
     }
 
     fprintf(resultadoVendas, "TOTAL GERAL VENDIDO: %.2f\n", totalGeral);
+    fprintf(resultadoVendas, "\n");
 
-    fprintf(resultadoVendas, "TOTAL DE VENDAS DE CADA PRODUTO: \n");
+    fprintf(resultadoVendas, "VENDAS POR PRODUTO: \n");
     for (int i = 0; i < num_produtos; i++){
-        fprintf(resultadoVendas, "[%d] %s: %.2f\n", i, vendedores[i].nome, tota)
+        fprintf(resultadoVendas, "[%d] %s: %.2f\n", produtos[i].descricao, totalVendasxProdutos);
     }
 
-
-
-
+    fprintf(resultadoVendas, "TOTAL DE VENDAS DE CADA VENDEDOR: \n");
+    for (int i = 0; i < num_vendedor; i++){
+        fprintf(resultadoVendas, "[%d] %s: %.2f\n", i, vendedores[i].nome, totalVendasxVendedores[i]);
+    }
+    fprintf(resultadoVendas, "\n");
 
 
 }
