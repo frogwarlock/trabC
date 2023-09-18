@@ -55,23 +55,21 @@ int main(){
 
     FILE *produtos_arq = fopen("produtos.txt", "r");
     if (produtos_arq == NULL){
-        perror("Um erro ocorreu ao abrir o arquivo produtos");
-        return 1;
+        printf("Um erro ocorreu ao abrir o arquivo produtos");
     }
 
     while(fscanf(produtos_arq, "%d %f %[^\n]", &produtos[num_produtos].codigo, produtos[num_produtos].descricao) != EOF ){
         num_produtos++;
-    };
+    }
 
     fclose(produtos_arq);
 
     Vendedor vendedores[max_vendedores];
-    int num_vendedor;
+    int num_vendedor = 0;
 
     FILE *vendedor_arq = fopen("vendedores.txt", "r");
     if (vendedor_arq = NULL) {
-        perror("Um erro ocorreu ao abrir o arquivo vendedores ");
-        return 1;
+        printf("Um erro ocorreu ao abrir o arquivo vendedores "); 
     }
 
     while (fscanf(vendedor_arq, "%d %[^\n]", &vendedores[num_vendedor].codigo, vendedores[num_vendedor].nome) != EOF) {
@@ -80,6 +78,54 @@ int main(){
 
     fclose(vendedor_arq);
 
+    Venda vendas[max_vendas];
+    int num_vendas = 0;
+
+    FILE *vendas_arq = fopen("vendas.txt", "r");
+    if (vendas_arq == NULL){
+        printf("Um erro ocorreu ao abrir o arquivo vendas");
+    }
+
+    while(fscanf(vendas_arq, "%d %d %d", &vendas[num_vendas].codigo_vendedor, &vendas[num_vendas].codigo_produto, &vendas[num_vendas].unidades) != EOF){
+        num_vendas++;
+    }
+
+    fclose(vendas_arq);
+
+
+    //calc. vendas
     
+    float totalVendasxProduto[max_vendedores] = {0}; // determina a matriz com todos os itens 0
+
+    for (int i = 0; i < num_vendas; i++){
+        int codigo_produto = vendas[i].codigo_produto - 1;
+        float preco =  produtos[codigo_produto].preco - 1 ;
+        int unidades = vendas[i].unidades;
+        totalVendasxProduto[codigo_produto] += preco * unidades;
+    }
+
+    float totalGeral = 0;
+
+    for (int i = 0; i < num_produtos; i++){
+        totalGeral += totalVendasxProduto[i];
+    }
+
+    //escreve info de vendas
+    FILE *resultadoVendas = fopen("resumoVendas.txt", "w");
+    if (resultadoVendas == NULL){
+        printf("Erro ao criar o arquivo resumoVendas");
+    }
+
+    fprintf(resultadoVendas, "TOTAL GERAL VENDIDO: %.2f\n", totalGeral);
+
+    fprintf(resultadoVendas, "TOTAL DE VENDAS DE CADA PRODUTO: \n");
+    for (int i = 0; i < num_produtos; i++){
+        fprintf(resultadoVendas, "[%d] %s: %.2f\n", i, vendedores[i].nome, tota)
+    }
+
+
+
+
+
 
 }
