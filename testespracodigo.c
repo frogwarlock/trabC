@@ -47,14 +47,15 @@ typedef struct{
     int unidades;
 } Venda;
 
-//int diz respeito ao que ele retorna
+// int diz respeito ao que ele retorna (como se fosse total de 
+// indíces)
 int main(){
     Produto produtos[max_produtos];
     int num_produtos = 0;
 
     FILE *produtos_arq = fopen("produtos.txt", "r");
     if (produtos_arq == NULL){
-        perror("Um erro ocorreu ao abrir o arquivo");
+        perror("Um erro ocorreu ao abrir o arquivo produtos");
         return 1;
     }
 
@@ -63,5 +64,22 @@ int main(){
     };
 
     fclose(produtos_arq);
+
+    Vendedor vendedores[max_vendedores];
+    int num_vendedor;
+
+    FILE *vendedor_arq = fopen("vendedores.txt", "r");
+    if (vendedor_arq = NULL) {
+        perror("Um erro ocorreu ao abrir o arquivo vendedores ");
+        return 1;
+    }
+
+    while (fscanf(vendedor_arq, "%d %[^\n]", &vendedores[num_vendedor].codigo, vendedores[num_vendedor].nome) != EOF) {
+        num_vendedor++;
+    }
+
+    fclose(vendedor_arq);
+
+    
 
 }
