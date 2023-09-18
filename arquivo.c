@@ -42,6 +42,9 @@ typedef struct
     int unidades;
 } Venda;
 
+
+
+
 int main()
 {
     Produto produtos[max_produtos];
@@ -71,7 +74,7 @@ int main()
         return 1; 
     }
 
-    while (fscanf(vendedor_arq, "%d %[^\n]", &vendedores[num_vendedor].codigo, vendedores[num_vendedor].nome) != EOF)
+    while (fscanf(vendedor_arq, "%d %[^\n]", &vendedores[num_vendedor].codigo, vendedores[num_vendedor].nome) != EOF) // END OF FILE
     {
         num_vendedor++;
     }
@@ -133,7 +136,7 @@ int main()
         printf("Erro ao criar o arquivo resumoVendas");
         return 1; 
     }
-
+    
     fprintf(resultadoVendas, "TOTAL GERAL VENDIDO: %.2f\n", totalGeral);
     fprintf(resultadoVendas, "\n");
     fprintf(resultadoVendas, "\n");

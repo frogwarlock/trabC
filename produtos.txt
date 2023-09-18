@@ -1,5 +1,3 @@
-código-do-produto preço-do-produto descrição-do-produto
-
  6  12.99 sanduíche
  7  5.50 salgado 
  4  3.50 café 
