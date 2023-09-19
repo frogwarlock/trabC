@@ -22,6 +22,7 @@ void ler_arquivo(char* titulo){
     fclose(arquivo);
 }
 
+// ALTERAR A MAIN
 int main(){
     int escolha;
     scanf("%d", &escolha);
