@@ -93,6 +93,8 @@ void lerProduto(Produto produtos[], int *num_produtos)
         return;
     }
 
+    fscanf(produtos_arq, "%*[^\n]\n");
+
     while (fscanf(produtos_arq, "%d %f %[^\n]", &produtos[*num_produtos].codigo, &produtos[*num_produtos].preco, produtos[*num_produtos].descricao) != EOF)
     {
         (*num_produtos)++;
@@ -110,6 +112,8 @@ void lerVendedores(Vendedor vendedores[], int *num_vendedor)
         return;
     }
 
+    fscanf(vendedor_arq, "%*[^\n]\n");
+
     while (fscanf(vendedor_arq, "%d %[^\n]", &vendedores[*num_vendedor].codigo, vendedores[*num_vendedor].nome) != EOF)
     {
         (*num_vendedor)++;
@@ -126,6 +130,8 @@ void lerVendas(Venda vendas [], int *num_vendas)
         printf("Um erro ocorreu ao abrir o arquivo vendas");
         return;
     }
+
+    fscanf(vendas_arq, "%*[^\n]\n");
 
     while (fscanf(vendas_arq, "%d %d %d", &vendas[*num_vendas].codigo_vendedor, &vendas[*num_vendas].codigo_produto, &vendas[*num_vendas].unidades) != EOF)
     {

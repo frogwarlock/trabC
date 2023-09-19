@@ -1,4 +1,4 @@
-código-do-vendedor nome-do-vendedor
+18
  1  daniel 
  4  isabela
  3  eduardo 
