@@ -4,12 +4,11 @@
 
 // o que as funções fazem:
 // imprime o log de vendas
-// imprime catálogo de produtos 
-// imprime lista de vendedores 
+// imprime catálogo de produtos
+// imprime lista de vendedores
 // mostra o total vendido
 // mostra o total vendido por produto ex(p 35(prato): R$ 75.00)
 // mostra o total vendido por vendedor ex.(v 54(Marisa): R$170.00)
-
 
 #include <stdio.h>
 #include <string.h>
@@ -42,7 +41,7 @@ typedef struct
     int unidades;
 } Venda;
 
-//chama func antes da main
+// chama func antes da main
 void lerProduto(Produto produtos[], int *num_produtos);
 void lerVendedores(Vendedor vendedores[], int *num_vendedor);
 void lerVendas(Venda vendas[], int *num_vendas);
@@ -81,7 +80,7 @@ int main()
 
     fazArquivosTotais(totalGeral, produtos, vendedores, totalVendasxVendedores, totalVendasxProdutos, num_produtos, num_vendedor);
 
-    return 0; 
+    return 0;
 }
 
 void lerProduto(Produto produtos[], int *num_produtos)
@@ -122,7 +121,7 @@ void lerVendedores(Vendedor vendedores[], int *num_vendedor)
     fclose(vendedor_arq);
 }
 
-void lerVendas(Venda vendas [], int *num_vendas)
+void lerVendas(Venda vendas[], int *num_vendas)
 {
     FILE *vendas_arq = fopen("vendas.txt", "r");
     if (vendas_arq == NULL)
@@ -142,7 +141,7 @@ void lerVendas(Venda vendas [], int *num_vendas)
 }
 
 void calculaTotalVendedores(Venda vendas[], Produto produtos[], Vendedor vendedores[], int num_vendas, int num_produtos, int num_vendedores,
- float totalVendasxVendedores[])
+                            float totalVendasxVendedores[])
 {
     for (int i = 0; i < num_vendas; i++)
     {
@@ -166,7 +165,7 @@ void calculaTotalProdutos(Venda vendas[], Produto produtos[], int num_vendas, in
 }
 
 void fazArquivosTotais(float totalGeral, Produto produtos[], Vendedor vendedores[], float totalVendasxVendedores[], float totalVendasxProdutos[],
- int num_produtos, int num_vendedor)
+                       int num_produtos, int num_vendedor)
 {
     // info vendas pro arquivo
     FILE *resultadoVendas = fopen("arquivosTotais.txt", "w");
@@ -175,7 +174,7 @@ void fazArquivosTotais(float totalGeral, Produto produtos[], Vendedor vendedores
         printf("Erro ao criar o arquivo resumoVendas");
         return;
     }
-    
+
     fprintf(resultadoVendas, "TOTAL GERAL VENDIDO: %.2f\n", totalGeral);
     fprintf(resultadoVendas, "\n");
     fprintf(resultadoVendas, "\n");
@@ -200,7 +199,5 @@ void fazArquivosTotais(float totalGeral, Produto produtos[], Vendedor vendedores
     fprintf(resultadoVendas, "\n");
     fprintf(resultadoVendas, "\n");
 
-    fclose(resultadoVendas); 
+    fclose(resultadoVendas);
 }
-
-

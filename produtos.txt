@@ -1,19 +1,19 @@
 18
- 6  12.99 sanduíche
- 7  5.50 salgado 
- 4  3.50 café 
- 12  5.00 refrigerante 
- 1  9.90 sorvete 
- 9  3.45 chá 
- 3  2.50 paçoca
- 88  3.50 achocolatado
- 42  8.25 pão
- 54  44.40 prato feito 
- 5  5.00 cereal
- 44  35.00 macarrão
- 43  12.00 hambúrger
- 82  9.50 milkshake
- 67  3.50 barrinha
- 45  1.00 bala
- 78  7.50 suco
- 34  6.90 whey
+ 1  12.99 sanduíche
+ 2  5.50 salgado 
+ 3  3.50 café 
+ 4  5.00 refrigerante 
+ 5  9.90 sorvete 
+ 6  3.45 chá 
+ 7  2.50 paçoca
+ 8  3.50 achocolatado
+ 9  8.25 pão
+ 10  44.40 prato feito 
+ 11 5.00 cereal
+ 12  35.00 macarrão
+ 13  12.00 hambúrger
+ 14  9.50 milkshake
+ 15  3.50 barrinha
+ 16  1.00 bala
+ 17  7.50 suco
+ 18  6.90 whey
