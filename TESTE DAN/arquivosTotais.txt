@@ -1,0 +1,76 @@
+TOTAL GERAL VENDIDO: 1373.06
+
+
+VENDAS POR PRODUTO: 
+[0] 1 sanduíche: 116.91
+[1] 2 salgado : 11.00
+[2] 3 café : 31.50
+[3] 4 refrigerante : 5.00
+[4] 5 sorvete : 29.70
+[5] 6 chá : 41.40
+[6] 7 paçoca: 7.50
+[7] 8 achocolatado: 42.00
+[8] 9 pão: 24.75
+[9] 10 prato feito : 532.80
+[10] 11 cereal: 40.00
+[11] 12 macarrão: 210.00
+[12] 13 hambúrger: 108.00
+[13] 14 milkshake: 38.00
+[14] 15 barrinha: 17.50
+[15] 16 bala: 3.00
+[16] 17 suco: 45.00
+[17] 18 whey: 69.00
+
+
+TOTAL DE VENDAS DE CADA VENDEDOR: 
+[0] 1 daniel : 696.91
+[1] 2 isabella: 153.40
+[2] 3 eduardo : 273.50
+[3] 4 Daniela: 181.50
+[4] 5 bruno      : 67.75
+
+
+ 1 daniel 
+ 2 isabella
+ 3 eduardo 
+ 4 Daniela
+ 5 bruno 
+ 
+ 1 1 9
+ 2 18 10
+ 3 2 2
+ 4 3 9
+ 5 4 1
+ 1 5 3
+ 2 6 12
+ 3 7 3
+ 4 8 12 
+ 5 9 3
+ 1 10 12 
+ 2 11 8
+ 3 12 6
+ 4 13 9 
+ 5 14 4 
+ 1 15 5
+ 2 16 3 
+ 3 17 6  
+ 
+ 1  12.99 sanduíche
+ 2  5.50 salgado 
+ 3  3.50 café 
+ 4  5.00 refrigerante 
+ 5  9.90 sorvete 
+ 6  3.45 chá 
+ 7  2.50 paçoca
+ 8  3.50 achocolatado
+ 9  8.25 pão
+ 10  44.40 prato feito 
+ 11 5.00 cereal
+ 12  35.00 macarrão
+ 13  12.00 hambúrger
+ 14  9.50 milkshake
+ 15  3.50 barrinha
+ 16  1.00 bala
+ 17  7.50 suco
+ 18  6.90 whey
+ 
