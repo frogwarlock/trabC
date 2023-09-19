@@ -47,7 +47,29 @@ void lerVendedores(Vendedor vendedores[], int *num_vendedor);
 void lerVendas(Venda vendas[], int *num_vendas);
 void calculaTotalVendedores(Venda vendas[], Produto produtos[], Vendedor vendedores[], int num_vendas, int num_produtos, int num_vendedores, float totalVendasxVendedores[]);
 void calculaTotalProdutos(Venda vendas[], Produto produtos[], int num_vendas, int num_produtos, float totalVendasxProdutos[]);
-void fazArquivosTotais(float totalGeral, Produto produtos[], Vendedor vendedores[], float totalVendasxVendedores[], float totalVendasxProdutos[], int num_produtos, int num_vendedor);
+void fazArquivosTotais(float totalGeral, Produto produtos[], Vendedor vendedores[], Venda vendas[], float totalVendasxVendedores[], float totalVendasxProdutos[], int num_produtos, int num_vendedor, int num_vendas);
+
+void ler_arquivo(char* titulo){
+    FILE *arquivo;
+    char linha[100];
+    char *result;
+
+    arquivo = fopen(titulo, "r");
+
+    if (arquivo == NULL){
+        printf("Problemas na abertura do arquivo \n");
+        return;
+    }
+
+    int i = 1;
+    while (!feof(arquivo)){
+        result = fgets(linha, 50, arquivo);
+        if (result) 
+            printf("[%d] %s ", i, linha);
+        i++;
+    }
+    fclose(arquivo);
+}
 
 int main()
 {
@@ -78,7 +100,7 @@ int main()
         totalGeral += totalVendasxProdutos[i];
     }
 
-    fazArquivosTotais(totalGeral, produtos, vendedores, totalVendasxVendedores, totalVendasxProdutos, num_produtos, num_vendedor);
+    fazArquivosTotais(totalGeral, produtos, vendedores, vendas, totalVendasxVendedores, totalVendasxProdutos, num_produtos, num_vendedor, num_vendas);
 
     return 0;
 }
@@ -164,8 +186,8 @@ void calculaTotalProdutos(Venda vendas[], Produto produtos[], int num_vendas, in
     }
 }
 
-void fazArquivosTotais(float totalGeral, Produto produtos[], Vendedor vendedores[], float totalVendasxVendedores[], float totalVendasxProdutos[],
-                       int num_produtos, int num_vendedor)
+void fazArquivosTotais(float totalGeral, Produto produtos[], Vendedor vendedores[], Venda vendas[], float totalVendasxVendedores[], float totalVendasxProdutos[],
+                       int num_produtos, int num_vendedor, int num_vendas)
 {
     // info vendas pro arquivo
     FILE *resultadoVendas = fopen("arquivosTotais.txt", "w");
@@ -175,10 +197,29 @@ void fazArquivosTotais(float totalGeral, Produto produtos[], Vendedor vendedores
         return;
     }
 
-    fprintf(resultadoVendas, "TOTAL GERAL VENDIDO: %.2f\n", totalGeral);
-    fprintf(resultadoVendas, "\n");
+    fprintf(resultadoVendas, "LOG DE VENDAS: \n");
+    for(int i = 0; i < num_vendas; i++){
+        fprintf(resultadoVendas, "[%d] %d %d %d \n ", i, vendas[i].codigo_vendedor, vendas[i].codigo_produto, vendas[i].unidades);
+    }
     fprintf(resultadoVendas, "\n");
 
+    fprintf(resultadoVendas, "CATALOGO DE PRODUTOS: \n");
+    for(int i = 0; i <num_produtos; i++){
+        fprintf(resultadoVendas, "[%d] %d %.2f %s\n", i, produtos[i].codigo, produtos[i].preco, produtos[i].descricao);
+    }
+    fprintf(resultadoVendas, "\n");
+
+    fprintf(resultadoVendas, "LISTA DE VENDEDORES: \n");
+    for(int i = 0; i < num_vendedor; i++){
+        fprintf(resultadoVendas, "[%d] %d %s\n", i, vendedores[i].codigo, vendedores[i].nome);
+    }
+    fprintf(resultadoVendas, "\n");
+
+    
+
+    fprintf(resultadoVendas, "TOTAL GERAL VENDIDO: %.2f\n", totalGeral);
+    fprintf(resultadoVendas, "\n");
+    
     int j = 0;
     fprintf(resultadoVendas, "VENDAS POR PRODUTO: \n");
     for (int i = 0; i < num_produtos; i++)
